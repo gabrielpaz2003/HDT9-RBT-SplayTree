@@ -20,12 +20,16 @@ public class Factory <K,V>{
      */
     public IMaping<K,V> getStack(int option){
         if(option==1){
+            System.out.println("Se selecciono HashMap");
             return new HashingMap();
+            
 
         }else if(option==2){
+            System.out.println("Se selecciono Red Black Tree");
             return new RedBlackTree();
         }
         else if(option==3){
+            System.out.println("Se selecciono Splay Tree");
             return new SplayTree();
         }
         return null;
