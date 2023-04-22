@@ -55,7 +55,7 @@ public class Main {
                     System.out.println("Porfavor ingrese opciones que se encuentren en el menu.");
                 }
             }catch(Exception e){
-                System.out.println("Porfavor ingrese unicamente numeros.");
+                System.out.println("Porfavor ingrese unicamente numeros del 1-3.");
             }
         }
 
@@ -75,15 +75,15 @@ public class Main {
             Scanner input = new Scanner (file);
             while(input.hasNextLine()){
                 String dato = input.nextLine();
-                String[] partes = dato.split("\\s+");
+                String[] parts = dato.split("\\s+");
                 String key = "";
                 String value = "";
-                if(partes.length<=2){
-                    key = partes[0];
-                    value = partes[1];
+                if(parts.length<=2){
+                    key = parts[0];
+                    value = parts[1];
                 }else{
-                    key = partes[0];
-                    value = partes[2];
+                    key = parts[0];
+                    value = parts[2];
                 }
 
                 stack.add(key,value);
